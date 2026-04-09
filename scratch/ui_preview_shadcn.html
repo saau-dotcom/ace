@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar ACE CRM Style Preview (shadcn/ui)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fafafa; color: #09090b; }
+        .sidebar { background-color: #ffffff; border-right: 1px solid #e4e4e7; }
+        .card { background-color: #ffffff; border-radius: 8px; border: 1px solid #e4e4e7; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .btn-primary { background-color: #18181b; color: #ffffff; border-radius: 6px; }
+        .btn-secondary { background-color: #f4f4f5; color: #18181b; border-radius: 6px; }
+        .accent-zinc { color: #71717a; }
+        .text-muted { color: #71717a; }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="sidebar w-64 flex flex-col shrink-0">
+        <div class="h-16 flex items-center px-6 border-b border-zinc-100">
+            <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded bg-zinc-900 flex items-center justify-center text-white font-bold text-xs">S</div>
+                <span class="font-semibold tracking-tight">Solar ACE</span>
+            </div>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-1">
+            <div class="px-2 mb-2 text-[10px] font-medium text-zinc-500 uppercase tracking-wider">Overview</div>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md bg-zinc-100 text-zinc-900 font-medium text-sm">
+                <i class="ph ph-squares-four text-lg"></i>
+                Dashboard
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 transition-colors text-sm">
+                <i class="ph ph-users text-lg"></i>
+                Leads & CRM
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 transition-colors text-sm">
+                <i class="ph ph-calendar-blank text-lg"></i>
+                Installations
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 transition-colors text-sm">
+                <i class="ph ph-envelope-simple text-lg"></i>
+                Communications
+            </a>
+        </nav>
+        <div class="p-4 border-t border-zinc-100">
+            <div class="flex items-center gap-3 px-2">
+                <div class="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center text-xs font-semibold text-zinc-600">JD</div>
+                <div class="flex-1 overflow-hidden">
+                    <div class="text-xs font-semibold truncate">John Doe</div>
+                    <div class="text-[10px] text-zinc-500 truncate">john@solarace.com</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col overflow-y-auto">
+        <!-- Header -->
+        <header class="h-16 bg-white border-b border-zinc-200 px-8 flex items-center justify-between shrink-0">
+            <div class="flex items-center gap-4">
+                <h1 class="text-sm font-semibold text-zinc-900">Dashboard</h1>
+                <div class="h-4 w-[1px] bg-zinc-200"></div>
+                <div class="text-xs text-zinc-500 font-medium">Performance Metrics</div>
+            </div>
+            <div class="flex items-center gap-3">
+                <button class="h-8 px-3 btn-secondary text-xs font-medium flex items-center gap-2 border border-zinc-200 shadow-sm">
+                    <i class="ph ph-export"></i>
+                    Export
+                </button>
+                <button class="h-8 px-3 btn-primary text-xs font-medium flex items-center gap-2 shadow-sm">
+                    <i class="ph ph-plus"></i>
+                    New Task
+                </button>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="p-8 space-y-6">
+            <!-- Stats -->
+            <div class="grid grid-cols-4 gap-4">
+                <div class="card p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] font-medium text-zinc-500">Total Pipeline</span>
+                        <i class="ph ph-users text-zinc-400"></i>
+                    </div>
+                    <div class="text-2xl font-bold tracking-tight">1,280</div>
+                    <div class="mt-1 text-[10px] text-zinc-500">+12% from last month</div>
+                </div>
+                <div class="card p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] font-medium text-zinc-500">Revenue</span>
+                        <i class="ph ph-dollar text-zinc-400"></i>
+                    </div>
+                    <div class="text-2xl font-bold tracking-tight">$42,800.00</div>
+                    <div class="mt-1 text-[10px] text-zinc-500">+5.4% from last week</div>
+                </div>
+                <div class="card p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] font-medium text-zinc-500">Active Jobs</span>
+                        <i class="ph ph-activity text-zinc-400"></i>
+                    </div>
+                    <div class="text-2xl font-bold tracking-tight">+14</div>
+                    <div class="mt-1 text-[10px] text-zinc-500">3 starting today</div>
+                </div>
+                <div class="card p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] font-medium text-zinc-500">Success Rate</span>
+                        <i class="ph ph-check-circle text-zinc-400"></i>
+                    </div>
+                    <div class="text-2xl font-bold tracking-tight">98.2%</div>
+                    <div class="mt-1 text-[10px] text-zinc-500">+2% vs industry avg</div>
+                </div>
+            </div>
+
+            <!-- Main Sections -->
+            <div class="grid grid-cols-3 gap-6">
+                <!-- Large Chart Card -->
+                <div class="col-span-2 card">
+                    <div class="p-6 border-b border-zinc-100 flex items-center justify-between">
+                        <div>
+                            <h3 class="text-sm font-semibold">Sales Trajectory</h3>
+                            <p class="text-[11px] text-zinc-500">Total system power (kW) sold this period</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <div class="h-7 w-[1px] bg-zinc-100 mx-2"></div>
+                            <button class="h-7 px-3 btn-secondary text-[11px] font-medium">Daily</button>
+                            <button class="h-7 px-3 bg-zinc-900 text-white rounded-md text-[11px] font-medium">Weekly</button>
+                        </div>
+                    </div>
+                    <div class="p-6 h-[280px] flex items-end gap-3 pt-10">
+                        <!-- Simulated shadcn line chart vibe with bars -->
+                        <div class="flex-1 bg-zinc-100 h-[40%] rounded-sm"></div>
+                        <div class="flex-1 bg-zinc-100 h-[60%] rounded-sm"></div>
+                        <div class="flex-1 bg-zinc-100 h-[30%] rounded-sm"></div>
+                        <div class="flex-1 bg-zinc-900 h-[80%] rounded-sm"></div>
+                        <div class="flex-1 bg-zinc-100 h-[50%] rounded-sm"></div>
+                        <div class="flex-1 bg-zinc-100 h-[90%] rounded-sm"></div>
+                        <div class="flex-1 bg-zinc-100 h-[70%] rounded-sm"></div>
+                    </div>
+                </div>
+
+                <!-- Calculator Card -->
+                <div class="card flex flex-col">
+                    <div class="p-6 border-b border-zinc-100">
+                        <h3 class="text-sm font-semibold">STC Estimator</h3>
+                        <p class="text-[11px] text-zinc-500">Australian carbon credits claim</p>
+                    </div>
+                    <div class="p-6 space-y-6 flex-1">
+                        <div>
+                            <div class="flex justify-between text-[11px] font-semibold mb-2">
+                                <span>System Size</span>
+                                <span class="text-zinc-500">6.6 kW</span>
+                            </div>
+                            <div class="h-1.5 w-full bg-zinc-100 rounded-full overflow-hidden">
+                                <div class="h-full w-2/3 bg-zinc-900"></div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button class="h-8 border border-zinc-200 rounded-md text-[10px] font-semibold bg-zinc-50">Zone 3</button>
+                            <button class="h-8 border border-zinc-200 rounded-md text-[10px] font-semibold text-zinc-400">Zone 4</button>
+                        </div>
+                        <div class="mt-auto pt-6 border-t border-zinc-100">
+                            <div class="text-[10px] font-medium text-zinc-500 uppercase tracking-wider mb-1">Expected Claims</div>
+                            <div class="text-3xl font-bold tracking-tighter">482 <span class="text-xs text-zinc-400 font-medium">STC</span></div>
+                        </div>
+                        <button class="w-full h-9 btn-primary text-xs font-medium shadow-sm">Apply to Lead</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
